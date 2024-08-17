@@ -34,7 +34,7 @@ function getIconComponent(type) {
 
   {folderData.length === 0 ? <NoResults/> : (
     <>
-      {folderData.map((item) => {
+      {folderData.map((item:any) => {
         const IconComponent = getIconComponent(item.type)
         return (
           <a
@@ -54,12 +54,16 @@ function getIconComponent(type) {
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const goBack = () => {
-      window.history.back()
+      window.history.back();
     }
-
-    document.getElementById('backButton').addEventListener('click', (event) => {
-      event.preventDefault()
-      goBack()
-    })
-  })
+    const backButton = document.getElementById('backButton');
+    
+    if (backButton) {
+      backButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        goBack();
+      });
+    }
+  });
 </script>
+
