@@ -1,0 +1,31 @@
+---
+  import style from './nav.module.css'
+  import IconNav from '../icons/iconNav.astro'
+  import NavView from '../navView.astro'
+---
+<header>
+  <div class={style.containerNav}>
+    <div class={style.navBar}>
+      <h1><a href="/"><span class={style.mainH1}>casvaru</span> Files</a></h1>
+      
+    </div>
+    <div id="buttonNav" class={style.navBarBack}>
+      <IconNav />
+  </div>
+  </div>
+</header>
+<NavView />
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const $menuHamburger = document.getElementById('buttonNav');
+    const $navView = document.getElementById('navView');
+
+    if ($menuHamburger && $navView) {
+      $menuHamburger.addEventListener('click', () => {
+        $navView.classList.toggle('activeNav');
+      });
+    } else {
+      console.error('No se pudo encontrar los elementos necesarios.');
+    }
+  });
+</script>

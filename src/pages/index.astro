@@ -1,0 +1,26 @@
+---
+import style from '../../public/id.module.css'
+import Layout from "../components/layout/Layout.astro"
+import data from '../data/data.json'
+import IconFolder from '../components/icons/iconFolder.astro'
+import IconLink from '../components/icons/iconLink.astro'
+const iconMap = {
+  folder: IconFolder,
+  link: IconLink,
+}
+
+function getIconComponent(type) {
+  return iconMap[type] || IconLink // IconLink como fallback si el tipo no se encuentra
+}
+---
+<Layout>
+		{data.home.map((item) => {
+			const IconComponent = getIconComponent(item.type)
+			return (
+				<a href={item.url} class={style.itemList}>
+					<IconComponent />
+					<span>{item.name}</span>
+				</a>
+			)
+		})}
+</Layout>

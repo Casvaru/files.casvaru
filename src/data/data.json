@@ -1,0 +1,65 @@
+{
+  "home": [
+    {
+      "name": "Libros que recomiendo",
+      "url": "/libros_que_recomiendo",
+      "type": "folder"
+    },
+    {
+      "name": "Herramientas",
+      "url": "/herramientas",
+      "type": "folder"
+    }
+  ],
+  "libros_que_recomiendo": [
+    {
+      "name": "WCGA",
+      "url": "WCGA",
+      "type": "folder"
+    },
+    {
+      "name": "Atomic design - Brad Frost",
+      "url": "https://www.softouch.on.ca/kb/data/Atomic%20Design.pdf",
+      "type": "link"
+    },
+    {
+      "name": "La psicología de los objetos cotidianos - Donald Norman",
+      "url": "https://www.loop.la/descargas/disenho/Psicologia_objetos_cotidianos%20-%20Donald%20Norman.pdf",
+      "type": "link"
+    },
+    {
+      "name": "Las leyes de la simplicidad - John Maeda",
+      "url": "https://www.apadisenografico.com/john-maeda-las-leyes-de-la-simplicidad-pdf/",
+      "type": "link"
+    },
+    {
+      "name": "No me hagas pensar - Steve Krug",
+      "url": "https://github.com/franjorub/libros/blob/master/UI-UX/No%20me%20hagas%20pensar%20(Usabilidad%20en%20la%20Web).pdf",
+      "type": "link"
+    },
+    {
+      "name": "Pensar con tipos - Ellen Lupton",
+      "url": "https://api.pageplace.de/preview/DT0400.9788425229350_A47323496/preview-9788425229350_A47323496.pdf",
+      "type": "link"
+    }
+  ],
+  "herramientas": [
+    {
+      "name": "Can I include",
+      "url": "https://caninclude.glitch.me/",
+      "type": "link"
+    },
+    {
+      "name": "W3C Validator",
+      "url": "https://validator.w3.org/",
+      "type": "link"
+    }
+  ],
+  "WCGA":[
+    {
+      "name": "Accesibilidad web WCGA 2.1 - Olga Revilla, Olga Carrera",
+      "url": "https://olgacarreras.blogspot.com/2018/11/libro-accesibilidad-web-wcag-21-de.html",
+      "type": "link"
+    }
+  ]
+}

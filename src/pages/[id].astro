@@ -1,0 +1,65 @@
+---
+import style from '../../public/id.module.css'
+import data from '../data/data.json'
+import Layout from '../components/layout/Layout.astro'
+import IconFolder from '../components/icons/iconFolder.astro'
+import IconLink from '../components/icons/iconLink.astro'
+import NoResults from '../components/noResults/noResults.astro'
+
+const iconMap = {
+  folder: IconFolder,
+  link: IconLink,
+}
+
+export async function getStaticPaths() {
+  const paths = Object.keys(data)
+    .filter(key => key !== 'home')
+    .map(key => ({
+      params: { id: key },
+    }))
+
+  return paths
+}
+
+const { id } = Astro.params
+const folderData = data[id] || []
+
+function getIconComponent(type) {
+  return iconMap[type] || IconLink
+}
+---
+
+<Layout>
+  <a class={style.linkBack} href=".." id="backButton">Atrás</a>
+
+  {folderData.length === 0 ? <NoResults/> : (
+    <>
+      {folderData.map((item) => {
+        const IconComponent = getIconComponent(item.type)
+        return (
+          <a
+            href={item.url}
+            class={style.itemList}
+            target={item.type === 'link' ? '_blank' : '_self'}
+          >
+            <IconComponent />
+            <span>{item.name}</span>
+          </a>
+        )
+      })}
+    </>
+  )}
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const goBack = () => {
+      window.history.back()
+    }
+
+    document.getElementById('backButton').addEventListener('click', (event) => {
+      event.preventDefault()
+      goBack()
+    })
+  })
+</script>

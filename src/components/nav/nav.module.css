@@ -1,0 +1,60 @@
+.containerNav{
+  border-radius: var(--borderDouble);
+  color: var(--white);
+  width: auto;
+  position: fixed;
+  bottom: 0; left: 0;
+  margin-left: 50%;
+  margin-bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 5px;
+  padding: 8px;
+  background: var(--black);
+  border: 1px solid var(--gray);
+  z-index: 10;
+}
+.navBarBack{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; width: 40px;
+  background: var(--black);
+  padding: 20px;
+  border-radius: var(--border);
+  color: var(--white);
+  font-size: 18px;
+  border: 1px solid var(--gray);
+  cursor: pointer;
+}
+.navBarBack:hover{
+  border: 1px solid var(--white);
+}
+.navBar a{
+  height: 100%;
+  background: var(--black);
+  border-radius: var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  border: 1px solid var(--gray);
+}
+.navBar a:hover{
+  border: 1px solid var(--white);
+}
+.mainH1{
+  color: var(--mainColor);
+}
+h1{
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+a{
+  color: var(--white);
+}

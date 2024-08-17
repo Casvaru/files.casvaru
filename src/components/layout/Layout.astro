@@ -1,0 +1,27 @@
+---
+import style from './layout.module.css'
+
+import Nav from '../nav/nav.astro'
+---
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://use.typekit.net/jaj0nnx.css">
+		<title>Casvaru files</title>
+	</head>
+	<body>
+    <section class={style.containerLayout}>
+      <div>
+        <a class={style.breadCrumbs} href="/">Inicio</a>
+        <a id="span"></a>
+      </div>
+      <slot />
+    </section>
+    <Nav />
+	</body>
+</html>
+<script src="./breadCrumbs.js"></script>

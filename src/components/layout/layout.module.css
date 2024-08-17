@@ -1,0 +1,11 @@
+.containerLayout{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  color: var(--white);
+}
+.breadCrumbs{
+  color: var(--white) !important;
+  font-size: 18px;
+}
